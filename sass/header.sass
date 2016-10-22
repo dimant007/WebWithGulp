@@ -60,12 +60,13 @@ b, strong
 	background-size: cover
 	background-position: center
 	position: relative
+	padding-bottom: 120px
 	&::before
 		@extend .before
 		background-color: #394b5f
 		opacity: .85
-
 	h1
+		line-height: em(18px)
 		text-transform: none
 
 .top-line
@@ -159,3 +160,116 @@ b, strong
 .toggle-mnu.on + #menu 
 	opacity: 1
 	visibility: visible
+
+.header-wrap 
+	margin-top: 40px
+	h1
+		margin-top: 120px
+		color: #fff
+		border-bottom: $main-color 8px solid
+		display: inline-block
+		padding-bottom: 10px
+	ul
+		@extend .ulmnu
+		margin-top: 10px
+		li
+			display: block
+			font-size: 18px
+			margin-bottom: 12px
+			font-family: "RalawaySemiBold", $helvetica
+			position: relative
+			padding-left: 16px
+			&::before
+				content: ''
+				display: block
+				width: 6px
+				height: 11px
+				+triangle(12px, $main-color, right)
+				position: absolute
+				top: 9px
+				left: 0
+			a
+				text-decoration: none
+				color: #fff
+				&:hover
+					text-decoration: underline
+
+.header-left
+	margin-bottom: 50px
+
+.forms
+	background-color: transparentize(#243343, .2)
+	padding: 30px 35px 30px
+	color: #97a4b2
+	font-size: em(14px)
+	border-bottom: #1A222B 3px solid
+	h4
+		color: #fff
+		font-family: "PFCentroSlabProMedium", $helvetica
+		font-size: em(33px)
+		text-transform: none
+		margin: 0
+	p
+		line-height: em(23px)
+		margin-top: 15px
+	label 
+		margin-top: 22px
+		margin-bottom: 20px
+		display: block
+		span
+			letter-spacing: 1.5px
+			display: block
+			margin-bottom: 6px
+			color: #778390
+	input
+		display: block
+		width: 100%
+		border: none
+		box-shadow: 0 -3px #1F2A36
+		background-color: #34465A
+		text-indent: 10px
+		padding: 10px 0
+		transition: all .5s ease
+		color: #fff
+		font-family: "PFCentroSlabProMedium", $helvetica
+		font-size: em(20px)
+		&:focus
+			box-shadow: 0 -6px #1F2A36
+			background-color: #394E65
+	.buttons
+		margin-top: 10px
+
+.button-wrap
+	text-align: center
+
+.buttons
+	display: inline-block
+	border: none
+	background-color: $main-color
+	color: #111
+	font-family: "PFCentroSlabProBold", $helvetica
+	font-size: em(22px)
+	padding: 12px 30px
+	border-bottom: #B97200 3px solid
+	transition: all .5s ease
+	&:hover
+		background-color: #FFB338
+	&:active
+		background-color: #DB8C0E
+
+.arrow-wrap
+	@extend .button-wrap
+	position: relative
+	z-index: 2
+	top: 50px
+
+.arrow-bottom
+	display: inline-block
+	width: 40px
+	height: 40px
+	background-image: url(img/arrow_down.png)
+	cursor: pointer
+	opacity: .7
+	transition: all .35s ease
+	&:hover
+		opacity: 1
