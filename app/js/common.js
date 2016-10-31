@@ -12,6 +12,9 @@ $(function() {
 		});
 	};
 
+	$(".section-content .info-item").equalHeights();
+	$(".s1-bottom .info-item").equalHeights();
+
 	//E-mail Ajax Send
 	//Documentation & Example: https://github.com/agragregra/uniMail
 	$("form").submit(function() { //Change
