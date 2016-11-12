@@ -1,4 +1,4 @@
-$(function() {
+$(document).ready(function() {
 
 	$(".toggle-mnu").click(function() {
 		$(this).toggleClass("on");
@@ -12,9 +12,18 @@ $(function() {
 		});
 	};
 
-	$(".section_1 .section-content .info-item").equalHeights();
-	$(".s1-bottom .info-item").equalHeights();
-	$(".section3 .info-item-wrap").equalHeights();
+	$(".section_4").waypoint(function() {
+
+			$(".section_4 .card").each(function(index) {
+				var ths = $(this);
+				setInterval(function() {
+					ths.removeClass("card-off").addClass("card-on");
+				}, 200*index);
+			});
+
+		}, {
+			offset : "20%"
+	});
 
 	//E-mail Ajax Send
 	//Documentation & Example: https://github.com/agragregra/uniMail
