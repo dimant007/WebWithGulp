@@ -43,6 +43,18 @@ $(document).ready(function() {
 			offset : "20%"
 	});
 
+	$(".slider").owlCarousel({
+		items : 1,
+		nav : true, 
+		navText : "",
+		loop : true,
+		fluidSpeed : 600,
+		autoplaySpeed : 600,
+		navSpeed : 600,
+		dotsSpeed : 600,
+		dragEndSpeed : 600 
+	});
+
 	//E-mail Ajax Send
 	//Documentation & Example: https://github.com/agragregra/uniMail
 	$("form").submit(function() { //Change

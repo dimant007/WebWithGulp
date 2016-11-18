@@ -2,6 +2,8 @@
 @import "vars.sass"
 @import "_var.sass"
 @import "fonts.sass"
+@import "../app/libs/Magnific-Popup/magnific-popup.sass"
+@import "../app/libs/owl/assets/owl.carousel.sass"
 
 //Load Libs SASS
 @import "app/libs/animate/animate.sass"
@@ -400,6 +402,87 @@ body textarea:required:valid
 				font-family: "RobotoBold", $helvetica
 				font-size: em(18px)
 				color: #333
+
+.section_7
+	.section-head
+		p
+			text-align: center
+
+.slider
+	margin-bottom: 50px
+	.owl-item
+		.img-wrap
+			opacity: 0
+			transform: translate3d(200px, 0, 0)
+			transition: all .7s ease
+			transition-delay: .1s
+		.slide-descr, h3
+			opacity: 0
+			transform: translate3d(200px, 0, 0)
+			transition: all .7s ease
+			transition-delay: .4s
+		p
+			opacity: 0
+			transform: translate3d(200px, 0, 0)
+			transition: all .7s ease
+			transition-delay: .8s
+		&.active
+			.img-wrap, .slide-descr, h3, p
+				opacity: 1
+				transform: translate3d(0, 0, 0)
+
+	.slide
+		text-align: center
+		margin-bottom: 20px
+		position: relative
+		.img-wrap
+			width: 116px
+			height: 116px
+			display: inline-block
+			border-radius: 10em
+			overflow: hidden
+			box-shadow: 0 0 0 7px $main-color
+			margin: 6px
+			img
+				overflow: hidden
+		h3
+			text-transform: none
+			font-size: em(24px)
+		.slide-descr
+			margin-top: 10px
+			font-size: em(14px)
+			color: #5E7B8B
+
+	.owl-controls
+		text-align: center
+		.owl-dot
+			width: 15px
+			height: 15px
+			margin: 0 2px
+			background-color: #D6D6D6
+			display: inline-block
+			border-radius: 10em
+			&.active
+				background-color: $main-color
+		.owl-nav
+			position: absolute
+			top: 12%
+			width: 100%
+			> div
+				height: 29px
+				width: 16px
+				background-image: url(img/slider_arrows.png)
+				position: absolute
+				left: 20px
+				opacity: .5
+				transition: all .25s ease
+				&:hover
+					opacity: 1
+			.owl-next
+				right: 20px
+				left: auto
+				background-position: -16px 0px
+
 
 
 //ALWAYS END
