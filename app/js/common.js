@@ -33,9 +33,11 @@ $(document).ready(function() {
 					var myAnimation = new DrawFillSVG({
 						elementId: "tc-svg-" + index
 					});
-					ths.removeClass("").addClass("");
+					ths.children(".tc-content").addClass(".tc-content-on");
 				}, 500*index);
 			});
+
+			this.destroy();
 
 		}, {
 			offset : "20%"
