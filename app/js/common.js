@@ -6,9 +6,16 @@ $(document).ready(function() {
 	});
 
 	$(".main-footer .toggle-mnu").click(function() {
-		$("html, body").animate({ scrollTop: $(document).height() }, slow);
+		$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 		return false;
 	});
+
+	$(".arrow-bottom").click(function() {
+		$("html, body").animate({ scrollTop: $(".main-head").height()+120 }, "slow");
+		return false;
+	});
+
+	$(".homesect .section-head p, .homesect .section-head h2").animated("fadeInRight");
 
 	//SVG Fallback
 	if(!Modernizr.svg) {
